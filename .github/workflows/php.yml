@@ -1,4 +1,4 @@
-name: PHP Composer
+name: Instalações para teste PHPUnit
 
 on:
   push:
