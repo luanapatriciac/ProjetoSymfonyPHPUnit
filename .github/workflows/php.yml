@@ -1,7 +1,7 @@
 name: Instalações para teste PHPUnit
 
 on:
-  commit_comment:
+  push:
     branches: [ main ]
   pull_request:
     branches: [ main ]
@@ -29,6 +29,7 @@ jobs:
       
     - name: Teste PHPUNIT
       run: ./bin/phpunit
+      if: ${{failure() }}
 
     # Add a test script to composer.json, for instance: "test": "vendor/bin/phpunit"
     # Docs: https://getcomposer.org/doc/articles/scripts.md
